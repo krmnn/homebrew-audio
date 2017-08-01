@@ -11,7 +11,7 @@ before_install:
   - brew update
 
 script:
-  - brew install Formula/ardour5.rb
+  - brew install --verbose Formula/ardour5.rb
   - brew test Formula/ardour5.rb
 
 notifications:
