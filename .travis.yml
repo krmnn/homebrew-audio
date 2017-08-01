@@ -8,10 +8,9 @@ matrix:
 
 before_install:
   - brew tap krmnn/homebrew-audio 
-  - brew update
 
 script:
-  - brew install --verbose Formula/ardour5.rb
+  - travis_wait 40 brew install --verbose Formula/ardour5.rb
   - brew test Formula/ardour5.rb
 
 notifications:
