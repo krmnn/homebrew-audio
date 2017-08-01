@@ -68,9 +68,7 @@ class Ardour5 < Formula
     end
 
     cd "tools/osx_packaging" do
-      resource("mkappbundle").stage pwd
-      chmod "+x", "mkappbundle"
-      system "./mkappbundle", prefix
+      system "./osx_build", "--public"
     end
   end
 
